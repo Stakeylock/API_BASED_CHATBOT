@@ -1,7 +1,8 @@
 import streamlit as st
-from jiniai import JiniAI
+from groq import Groq
 
-client = JiniAI
+
+client = Groq(api_key=st.secrets["API_KEY"])
 
 def generate_prompt(user_input):
     prompt = (
